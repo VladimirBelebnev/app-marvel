@@ -3,6 +3,7 @@ import uw from '../../resources/img/UW.png';
 import xMen from '../../resources/img/x-men.png';
 
 const ComicsList = () => {
+
     return (
         <div className="comics__list">
             <ul className="comics__grid">
