@@ -37,9 +37,12 @@ const useMarvelService = () => {
     };
 
     const _transformComics = (comics) => {
-        id: comics.id,
-        title: comics.title, 
-        thumbnail: 
+        return {
+            id: comics.id,
+            title: comics.title,
+            price: (comics.prices[0].price === 0) ? 'NOT AVAILABLE' : comics.prices[0].price,
+            thumbnail: comics.thumbnail.path + '.' + comics.thumbnail.extension,
+        }
     };
 
     return {loading, error, getAllCharacters, getCharacter, getAllComics, clearError};
