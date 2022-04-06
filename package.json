@@ -1,6 +1,9 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "engines": {
+    "node": "16.0"
+  },
   "private": true,
   "homepage": "https://vladimirbelebnev.github.io/app-marvel/",
   "dependencies": {
