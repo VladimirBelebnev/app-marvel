@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {useState, useEffect} from 'react';
 
 import Spinner from '../spinner/Spinner';
@@ -50,14 +51,14 @@ const ComicsList = () => {
                     className="comics__item"
                     key={id} >
                     {/* eslint-disable-next-line */}
-                    <a href="#">
+                    <Link to={`/comics/${id}`}>
                         <img src={thumbnail}
                             alt={title}
                             className="comics__item-img"
                             style={styleImg} />
                         <div className="comics__item-name">{title}</div>
                         <div className="comics__item-price">{price}</div>
-                    </a>
+                    </Link>
                 </li>
             )
         });
