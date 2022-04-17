@@ -6,6 +6,7 @@ import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 import useMarvelService from '../../services/MarvelService';
 import Skeleton from '../skeleton/Skeleton';
+import CharSearchForm from "../charSearchForm/CharSearchForm";
 
 import './charInfo.scss';
 
@@ -47,6 +48,7 @@ const CharInfo = (props) => {
             {errorMessage}
             {spinner}
             {content}
+            <CharSearchForm />
         </div>
     )
 }
