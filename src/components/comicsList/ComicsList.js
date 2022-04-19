@@ -49,7 +49,7 @@ const ComicsList = () => {
 
             return (
                 <CSSTransition
-                    // key={id}
+                    key={id}
                     timeout={600}
                     classNames="comics__item">
                     <li
