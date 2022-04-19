@@ -49,12 +49,11 @@ const ComicsList = () => {
 
             return (
                 <CSSTransition
-                    key={id}
+                    // key={id}
                     timeout={600}
                     classNames="comics__item">
                     <li
-                        className="comics__item"
-                        key={id} >
+                        className="comics__item" >
                         {/* eslint-disable-next-line */}
                         <Link to={`/comics/${id}`}>
                             <img src={thumbnail}
@@ -69,7 +68,7 @@ const ComicsList = () => {
             )
         });
         return (
-            <TransitionGroup className="comics__grid" component="ul">
+            <TransitionGroup className="comics__grid" component="ul" >
                 {items}
             </TransitionGroup>
         )

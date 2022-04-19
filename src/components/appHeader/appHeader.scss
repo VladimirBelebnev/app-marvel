@@ -9,7 +9,8 @@
         font-weight: bold;
         font-size: 36px;
         line-height: 37px;
-        text-shadow: 1px 1px 1px #000;
+        color: #fff;
+        text-shadow: 1px 1px 5px #000;
         span {
             color: $main-color;
         }
@@ -21,7 +22,8 @@
             font-weight: bold;
             font-size: 28px;
             line-height: 32px;
-            text-shadow: 1px 1px 1px #000;
+            color: #fff;
+            text-shadow: 1px 1px 5px #000;
             li {
                 margin: 0 8px;
                 a:hover {
