@@ -7,6 +7,10 @@
         grid-template-columns: 650px 425px;
         column-gap: 25px;
         align-items: start;
+        &-fixed {
+            position: sticky;
+            top: 25px;
+        }
     }
     &__grid {
         display: grid;
@@ -15,6 +19,7 @@
         row-gap: 30px;
     }
     &__item {
+        border-radius: 25px;
         width: 200px;
         height: 318px;
         background-color: $dark;
@@ -23,6 +28,7 @@
         cursor: pointer;
         transition: 0.3s transform;
         img {
+            border-radius: 25px 25px 0 0;
             width: 200px;
             height: 200px;
             object-fit: cover;
@@ -30,7 +36,7 @@
         }
         &_selected {
             box-shadow: 0 5px 20px $main-color;
-            transform: translateY(-8px);
+            transform: scale(0.95);
         }
         &-enter {
             opacity: 0;

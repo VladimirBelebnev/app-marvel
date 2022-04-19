@@ -7,8 +7,9 @@
     }
     &__title {
         font-weight: bold;
-        font-size: 28px;
+        font-size: 36px;
         line-height: 37px;
+        text-shadow: 1px 1px 1px #000;
         span {
             color: $main-color;
         }
@@ -18,8 +19,9 @@
             display: flex;
             justify-content: space-between;
             font-weight: bold;
-            font-size: 24px;
+            font-size: 28px;
             line-height: 32px;
+            text-shadow: 1px 1px 1px #000;
             li {
                 margin: 0 8px;
                 a:hover {

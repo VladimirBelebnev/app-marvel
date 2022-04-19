@@ -1,3 +1,4 @@
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Link } from 'react-router-dom';
 import {useState, useEffect} from 'react';
 
@@ -47,25 +48,30 @@ const ComicsList = () => {
                 ? { objectFit: "contain" } : { objectFit: "cover" });
 
             return (
-                <li 
-                    className="comics__item"
-                    key={id} >
-                    {/* eslint-disable-next-line */}
-                    <Link to={`/comics/${id}`}>
-                        <img src={thumbnail}
-                            alt={title}
-                            className="comics__item-img"
-                            style={styleImg} />
-                        <div className="comics__item-name">{title}</div>
-                        <div className="comics__item-price">{price}</div>
-                    </Link>
-                </li>
+                <CSSTransition
+                    key={id}
+                    timeout={600}
+                    classNames="comics__item">
+                    <li
+                        className="comics__item"
+                        key={id} >
+                        {/* eslint-disable-next-line */}
+                        <Link to={`/comics/${id}`}>
+                            <img src={thumbnail}
+                                alt={title}
+                                className="comics__item-img"
+                                style={styleImg} />
+                            <div className="comics__item-name">{title}</div>
+                            <div className="comics__item-price">{price}</div>
+                        </Link>
+                    </li>
+                </CSSTransition>
             )
         });
         return (
-            <ul className="comics__grid">
+            <TransitionGroup className="comics__grid" component="ul">
                 {items}
-            </ul>
+            </TransitionGroup>
         )
     };
 
