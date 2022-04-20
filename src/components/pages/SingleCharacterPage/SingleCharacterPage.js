@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import {Helmet} from 'react-helmet';
 
 import './singleCharacterPage.scss';
 
@@ -9,7 +10,14 @@ const SingleCharacterPage = ({data}) => {
         ? { objectFit: "contain" } : { objectFit: "cover" });
 
     return (
-       <>
+       <>   
+            <Helmet>
+                <meta
+                    name="description"
+                    content={`${name} character book`}
+                />
+                <title>{name}</title>
+            </Helmet>
             <div className="single-char">
                 <img src={thumbnail} alt={name} style={styleImg} className="single-char__img" />
                 <div className="single-char__info">
