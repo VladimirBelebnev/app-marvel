@@ -17,12 +17,12 @@ const App = () => {
             <div className="app">
                 <AppHeader />
                 <main>
-                    <Suspense fallback={<Spinner/>}>
+                    <Suspense fallback={<Spinner />}>
                         <Routes>
                             <Route path="/characters" element={<MainPage />} />
                             <Route path="/characters/:id" element={<SinglePage Component={SingleCharacterPage} dataType='character' />} />
-                            <Route path="/comics" element={<ComicsPage />} />
-                            <Route path="/comics/:id" element={<SinglePage Component={SingleComicPage} dataType='comic' />} />
+                            <Route path="/comics" element={<ComicsPage />}/>
+                            <Route path="/comics/:id" element={<SinglePage Component={SingleComicPage} dataType='comic' />}/>
                             <Route path="*" element={<Page404 />} />
                         </Routes>
                     </Suspense>
