@@ -14,7 +14,7 @@ const CharList = (props) => {
     const [offset, setOffset] = useState(210);
     const [charEnded, setCharEnded] = useState(false);
 
-    const {process, setProcess, getAllCharacters} = useMarvelService();
+    const { getAllCharacters, process, setProcess} = useMarvelService();
 
     useEffect(() => {
         onRequest(offset, true);
@@ -28,15 +28,15 @@ const CharList = (props) => {
             .then(() => setProcess('confirmed'));
     };
 
-    const onCharListLoaded = (newCharList) => {
+    const onCharListLoaded = async(newCharList) => {
         let ended = false;
         if (newCharList.length < 9) {
             ended = true;
         };
 
-        setCharList(charList => [...charList, ...newCharList]);
+        setCharList([...charList, ...newCharList]);
         setNewItemLoading(false);
-        setOffset(offset => offset + 9);
+        setOffset(offset + 9);
         setCharEnded(ended)
     };
 
@@ -88,7 +88,6 @@ const CharList = (props) => {
         )
     }
 
-    // разбор в следующем уроке
     const elements = useMemo(() => {
         return setContentList(process, () => renderItems(charList), newItemLoading);
         // eslint-disable-next-line
