@@ -29,7 +29,7 @@ const CharSearchForm = () => {
         return (
             <div className="char__userFound">
                 <p className="char__search-succses">There is! Visit {char[0].name} page?</p>
-                <Link to={`/characters/${char[0].id}`} className="button button__secondary">
+                <Link to={`/app-marvel/${char[0].id}`} className="button button__secondary">
                     <div className="inner">To page</div>
                 </Link>
             </div>

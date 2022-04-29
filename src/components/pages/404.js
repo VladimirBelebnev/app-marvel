@@ -15,7 +15,7 @@ const Page404 = () => {
             </Helmet>
             <ErrorMessage />
             <p style={{'textAlign': 'center', 'fontWeight': 'bold', 'fontSize': '24px', 'color': 'white'}}>Page doesn't exist</p>
-            <Link to="/" style={{'display': 'block', 'textAlign': 'center', 'fontWeight': 'bold', 'fontSize': '24px', 'marginTop': '30px', 'color': 'white'}}>Back to main page</Link>
+            <Link to="/app-marvel" style={{'display': 'block', 'textAlign': 'center', 'fontWeight': 'bold', 'fontSize': '24px', 'marginTop': '30px', 'color': 'white'}}>Back to main page</Link>
         </div>
     )
 };
