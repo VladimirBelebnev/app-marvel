@@ -2,5 +2,4 @@
 
 Курс JS+React (Иван Петреченко)
 
-[Marvel App](https://vladimirbelebnev.github.io/app-marvel).
-
+https://vladimirbelebnev.github.io/app-marvel
